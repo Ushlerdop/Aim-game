@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Khula&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+  transition: 1s ease;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #16D9E3;
+}
+
+.start {
+  font-size: 1.5rem;
+}
+
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+  text-shadow: 0 0 5px black;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.5s ease-out;
+  background: linear-gradient(90deg, #b5d0dc 0%, #494f5f 150%);
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.time-list li {
+  margin: 10px;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.primary {
+  color: #16D9E3;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(50.38deg, #363f4b -4.6%, #8fb3da 200.44%);
+  box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: scale 0.2s;
+}
+
+.end-screen {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6383a8 0%, #3c5979 150%);
+  border-radius: 30px;
+  animation: scale 1s;
+  text-shadow: 0 0 5px black;
+}
+
+button {
+  font-family: inherit;
+  background: linear-gradient(150deg, #164275 0%, #518ccc 100%);
+  border: 2px solid #C0C0C0;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: .5rem 1rem;
+  box-shadow: 0 0 20px -5px rgb(190, 218, 255);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-shadow: 0 0 5px black;
+}
+
+button:hover {
+  border-color: #006eff;
+  box-shadow: 0 0 10px -3px #525252;
+  transform: scale(1.05);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes buttonsScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
